@@ -13,4 +13,4 @@
     - name: Copy application JAR
       copy:
         src: /var/lib/jenkins/workspace/devops-task-manager/target/devops-task-manager-1.0-SNAPSHOT.jar
-        dest: /var/lib/jenkinsdeployed-app/devops-task-manager.jar
+        dest: /var/lib/jenkins/deployed-app/devops-task-manager.jar
