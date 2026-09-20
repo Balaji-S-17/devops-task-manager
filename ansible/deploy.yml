@@ -1,0 +1,16 @@
+---
+- name: Deploy DevOps Task Manager
+  hosts: local
+  connection: local
+
+  tasks:
+    - name: Create deployment directory
+      file:
+        path: /tmp/devops-task-manager
+        state: directory
+        mode: '0755'
+
+    - name: Copy application JAR
+      copy:
+        src: /var/lib/jenkins/workspace/devops-task-manager/target/devops-task-manager-1.0-SNAPSHOT.jar
+        dest: /tmp/devops-task-manager/devops-task-manager.jar
