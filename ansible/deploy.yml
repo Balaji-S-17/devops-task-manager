@@ -6,11 +6,11 @@
   tasks:
     - name: Create deployment directory
       file:
-        path: /tmp/devops-task-manager
+        path: /var/lib/jenkins/deployed-app
         state: directory
         mode: '0755'
 
     - name: Copy application JAR
       copy:
         src: /var/lib/jenkins/workspace/devops-task-manager/target/devops-task-manager-1.0-SNAPSHOT.jar
-        dest: /tmp/devops-task-manager/devops-task-manager.jar
+        dest: /var/lib/jenkinsdeployed-app/devops-task-manager.jar
